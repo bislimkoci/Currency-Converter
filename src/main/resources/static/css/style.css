@@ -1,0 +1,59 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    height: auto;
+    width: auto;
+    background-color: blueviolet;
+    background-image: linear-gradient(90deg, rgb(209, 239, 181), rgb(86, 163, 166));
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+}
+
+
+h1 {
+    color: rgb(46, 53, 50);
+
+}
+
+.container {
+    background-color: rgb(86, 163, 166);
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.container p {
+    color: rgb(46, 53, 50);
+}
+
+.container form {
+    
+}
+
+.container form .Currencies {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    
+}
+
+.container form .Currencies .selector {
+    min-width: 100px;
+    background-color: rgb(10, 46, 54);
+    color: rgb(209, 239, 181);
+}
+
+.container form .amount {
+    min-width: 100px;
+    color: rgb(209, 239, 181);
+}
+
+
