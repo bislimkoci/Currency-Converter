@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This path is for live-server to work: /src/main/resources/static/css/style.css  -->
+     <!-- This path is for ultimatly the application to work: /css/style.css -->
+    <title>Currency converter</title>
+</head>
+<body>
+    <h1>Stauts</h1>
+
+
+    <div class="container">    
+        <p class="simpleText">This is to see how many request you have made</p>
+
+        <div class="result" th:if="${requestMade != null}"> 
+            <p>Total left: <span th:text="${requestMade}"></span></p>
+        </div>
+        <div class="result" th:unless="${requestMade != null}"> 
+            <p>rere</p>
+        </div>
+    </div>
+
+</body>
+</html>

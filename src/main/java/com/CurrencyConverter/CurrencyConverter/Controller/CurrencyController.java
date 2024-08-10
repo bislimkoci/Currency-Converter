@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.CurrencyConverter.CurrencyConverter.Service.CurrencyService;
@@ -40,11 +39,11 @@ public class CurrencyController {
         return "index";
     }
 
-    @PostMapping("/status") 
-    public void getStatus() {
-        System.out.println("The mothod calls");
-        currencyService.getStatus();
-        
+    @GetMapping("/status") 
+    public String getStatus(Model model) {
+        String requests = currencyService.getStatus();
+        model.addAttribute("requestMade", requests);
+        return "status";
     }
 
 
