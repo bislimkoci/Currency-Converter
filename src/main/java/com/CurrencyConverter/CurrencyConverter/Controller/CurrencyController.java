@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.CurrencyConverter.CurrencyConverter.Service.CurrencyService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 
 @Controller
 public class CurrencyController {
@@ -30,7 +32,7 @@ public class CurrencyController {
         @RequestParam("amount") double amount,
         @RequestParam("fromCurrency") String fromCurrency, 
         @RequestParam("toCurrency") String toCurrency, 
-        Model model) {
+        Model model) throws JsonMappingException, JsonProcessingException {
         
         double convertedAmount = currencyService.getConvertedAmount(amount, fromCurrency, toCurrency);
         
